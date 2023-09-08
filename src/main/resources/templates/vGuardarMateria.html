@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Guardar</title>
+
+</head>
+
+<body>
+
+	<h1>Guardar</h1>
+	<form th:action="@{/materias/guardar}" th:object="${materia}" method="POST">
+		<table>
+			<tr>
+				<td><label>Nombre Materia:</label></td>
+				<td><input type="text" th:fiel="${materia.nombre}"></td>
+				<td><label>Código:</label></td>
+				<td><input type="text" th:field="${materia.codigo}"></td>
+				<td><label>Número de créditos:</label></td>
+				<td><input type="text" th:field="${mateira.numeroCredito}"></td>
+				<td><label>Cédula de profesor:</label></td>
+				<td><input type="text" th:field="${materia.cedulaProfesor}"></td>
+			</tr>
+		</table>
+		<input type="submit" value="GUARDAR">
+	</form>
+	
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Guardar Estudiante</title>
+
+</head>
+
+<body>
+
+	<h1>Guardar Estudiante</h1>
+	
+	<form th:action="@{/estudiantes/guardar}" th:object="${estudiante}" method="POST">
+		
+		<table>
+			<tr>
+				<td><label>Nombre:</label></td>
+				<td><input type="text" th:field="${estudiante.nombre}"></td>
+				<td><label>Apellido:</label></td>
+				<td><input type="text" th:field="${estudiante.apellido}"></td>
+				<td><label>Cédula:</label></td>
+				<td><input type="text" th:field="${estudiante.cedula}"></td>
+				<td><label>Dirección:</label></td>
+				<td><input type="text" th:field="${estudiante.direccion}"></td>
+				<td><label>Teléfono:</label></td>
+				<td><input type="text" th:field="${estudiante.telefono}"></td>
+			</tr>
+		</table>
+		
+		<input type="submit" value="GUARDAR">
+	
+	</form>
+	<a href="@{/estudiantes/inicio}">SALIR</a>
+
+</body>
+
+</html>
